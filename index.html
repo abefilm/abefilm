@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #popupContent {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #popupContent iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="popup">
+    <div id="popupContent">
+
+        <iframe src="https://abefilmstreamtv.blogspot.com/" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    document.getElementById('closePopup').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
